@@ -1,0 +1,151 @@
+
+html{
+   scroll-behavior:smooth ;
+
+}
+
+
+     body {
+     background-color:#050210;
+     
+    
+
+     }
+
+
+     #outer-circle {
+      position:relative;
+      border-radius: 50%;
+      height:400px;
+      width:400px;
+      margin: 40px; 
+            padding: 40px;
+            left:30%;
+    
+     
+     
+  
+  background-image: linear-gradient(  #fb5dad 0%,  #55fb9f 50%, #b97aff 100%);
+
+
+  animation-duration: 1s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+}
+
+
+
+#outer-circle::after {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   bottom: -5px;
+   left: 5%;
+   height: 100%;
+   width: 100%;
+   opacity: 0.8;
+   border-radius: 50%;
+   
+   
+   background: inherit;
+   
+   
+
+   filter: blur(100px);
+   
+   
+
+   transition: all 1005s;
+ }
+
+
+
+
+
+
+     #inside-circle {
+      position:absolute;
+   
+     background-color:black;
+     display: block;
+      border-radius: 50%;
+      right: 30px;
+      left: 30px;
+      top: 30px;
+      bottom: 30px;
+      animation-name:bright;
+      animation-duration:4s;
+      animation-iteration-count: infinite;
+     
+     }
+
+     @keyframes rotate {
+      0% {transform:rotate(0deg);}
+      33% {transform:rotate(90deg);}
+      50% {transform:rotate(180deg);}
+      67% {transform:rotate(270deg);}
+      100% {transform:rotate(360deg);}}
+
+      @keyframes bright{
+         
+         0%   {
+            
+             filter: contrast(0.5);
+            transform:scale(0.05,0.05);}
+
+            10%   {
+            
+                filter: contrast(0.55);
+               transform:scale(0.1,0.1);}
+
+            20%   {
+                
+                filter: contrast(0.6);
+               transform:scale(0.2,0.2);}
+   
+         30%  {
+            
+             filter: contrast(0.65);
+             transform:scale(0.3,0.3);
+         }
+
+         40%   {
+            
+            filter: contrast(0.7);
+           transform:scale(0.4,0.4);}
+
+         50% {
+            
+             filter: contrast(0.75);
+             transform:scale(0.5,0.5);
+     }
+
+     60% {
+            
+        filter: contrast(0.8);
+        transform:scale(0.6,0.6);
+}
+
+70% {
+            
+    filter: contrast(0.85);
+    transform:scale(0.7,0.7);
+}
+
+80% {
+            
+    filter: contrast(0.9);
+    transform:scale(0.8,0.8);
+}
+
+90% {
+            
+    filter: contrast(0.95);
+    transform:scale(0.9,0.9);
+}
+
+100% {
+            
+    filter: contrast(1);
+    transform:scale(1,1);
+}}
